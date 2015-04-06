@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Responsive Project Template</title>
+	<script src="libs/phaser.js"></script>
+	<script src="states/Boot.js"></script>
+	<script src="states/Preloader.js"></script>
+	<script src="states/Menu.js"></script>
+	<script src="states/CrimeScene/crimeSceneMain.js"></script>
+    <script src="states/CrimeScene/glassLevel.js"></script>
+    <script src="states/CrimeScene/knobLevel.js"></script>
+    <script src="states/CrimeScene/weaponLevel.js"></script>
+    <script src="states/CrimeScene/canLevel.js"></script>
+    <script src="states/CrimeScene/paperLevel.js"></script>
+    <script src="states/CrimeScene/postCardLevel.js"></script>
+    <script src="states/Lab/canLab.js"></script>
+    <script src="states/Lab/gunLab.js"></script>
+    <script src="states/Lab/paperLab.js"></script>
+    <script src="states/Lab/postCardLab.js"></script>
+    <script src="states/gameOver.js"></script>
+    <script src="states/Intermission.js"></script>
+    <script src="states/LabScene.js"></script>
+    <script src="states/MatchPrints.js"></script>
+    <script src="states/Title.js"></script>
+    <script src="states/Outro.js"></script>
+    <script src="states/Thanks.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="gameContainer"></div>
+<script type="text/javascript">
+window.onload = function() {
+var game = new Phaser.Game(1600, 900, Phaser.AUTO, 'gameContainer');
+    game.state.add('Boot', BasicGame.Boot);
+    game.state.add('Preloader', BasicGame.Preloader); //Responsible for Assets preparation
+    game.state.add('Title', BasicGame.Title);
+    game.state.add('Menu', BasicGame.Menu);
+    game.state.add('crimeSceneMain', BasicGame.crimeSceneMain);
+    game.state.add('glassLevel', BasicGame.glassLevel);
+    game.state.add('knobLevel', BasicGame.knobLevel);
+    game.state.add('weaponLevel', BasicGame.weaponLevel);
+    game.state.add('canLevel', BasicGame.canLevel);
+    game.state.add('paperLevel', BasicGame.paperLevel);
+    game.state.add('postCardLevel', BasicGame.postCardLevel);
+    game.state.add('gameOver', BasicGame.gameOver);
+    game.state.add('intermission',BasicGame.Intermission);
+    game.state.add('canLab', BasicGame.canLab);
+    game.state.add('gunLab', BasicGame.gunLab);
+    game.state.add('paperLab', BasicGame.paperLab);
+    game.state.add('postCardLab', BasicGame.postCardLab);
+    game.state.add('labSceneMain', BasicGame.labScene);
+    game.state.add('MatchPrints', BasicGame.MatchPrints);
+    game.state.add('Outro', BasicGame.Outro);
+    game.state.add('Thanks', BasicGame.Thanks);
+    game.state.start('Boot');
+    
+}
+</script>
+
+</body>
+</html>
